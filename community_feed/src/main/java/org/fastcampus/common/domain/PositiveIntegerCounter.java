@@ -13,11 +13,14 @@ public class PositiveIntegerCounter {
     }
 
     public void decrease() {
-        if (this.count > 0) {
-            throw new IllegalStateException();
+        if (this.count <= 0) {
+            return;
         }
 
         this.count--;
     }
 
+    public int getCount() {
+        return count;
+    }
 }
